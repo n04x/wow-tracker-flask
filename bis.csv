@@ -1,0 +1,94 @@
+Class,Specialization,ID,Slot,Name,Source,Location,Quality
+Paladin,Holy,18510,Back,Hide of the Wild,Crafted through Leatherworking,None,Epic
+Paladin,Holy,19430,Back,Shroud of Pure Thought,Flamegor,Blackwing Lair,Epic
+Paladin,Holy,13346,Chest,Robes of the Exalted,Baron Rivendare,Stratholme Undead,Rare
+Paladin,Holy,19145,Chest,Robe of Volatile Power,Various Bosses,Molten Core,Epic
+Paladin,Holy,18507,Feet,Boots of the Full Moon,Captain Kromcrush,Dire Maul: North,Rare
+Paladin,Holy,13954,Feet,Verdant Footpads,Stonespine,Stratholme Undead,Rare
+Paladin,Holy,19437,Feet,Boots of Pure Thoughts,trash mobs,Blackwing Lair,Epic
+Paladin,Holy,18527,Hands,Harmonious Gauntlets,King Gordok,Dire Maul: North,Rare
+Paladin,Holy,19390,Hands,Taut Dragonhide Gloves,Chromaggus,Blackwing Lair,Epic
+Paladin,Holy,20264,Hands,Peacekeeper Gauntlets,Hakkar,Zul'Gurub,Epic
+Paladin,Holy,18490,Head,Insightful Hood,Cho'Rush,Dire Maul: North,Rare
+Paladin,Holy,20628,Head,Deviate Growth Cap,"Lethon, World boss",The Hinterlands,Epic
+Paladin,Holy,19132,Head,Crystal Adorned Crown,"Azuregos, World boss",Azshara,Epic
+Paladin,Holy,19375,Head,"Mish'undare, Circlet of the Mind Flayer",Nefarian,Blackwing Lair,Epic
+Paladin,Holy,22720,Head,Zulian Headdress,Various Bosses,Zul'Gurub,Rare
+Paladin,Holy,19385,Legs,Empowered Leggings,Chromaggus,Blackwing Lair,Epic
+Paladin,Holy,18875,Legs,Salamander Scale Pants,Various Bosses,Molten Core,Epic
+Paladin,Holy,19360,Weapon,Lok'amir il Romathis,Nefarian,Blackwing Lair,Epic
+Paladin,Holy,17103,Weapon,Azuresong Mageblade,Golemagg the Incinerator,Molten Core,Epic
+Paladin,Holy,23454,Weapon,Grand Marshal's Warhammer,Honor Rank 14,Battleground,Epic
+Paladin,Holy,17105,Weapon,Aurastone Hammer,Garr,Molten Core,Epic
+Paladin,Holy,19890,Weapon,Jin'do's Hexxer,Jin'do the Hexxer,Zul'Gurub,Epic
+Paladin,Holy,18814,Neck,Choker of the Fire Lord,Ragnaros,Molten Core,Epic
+Paladin,Holy,18723,Neck,Animated Chain Necklace,Ramstein,Stratholme Undead,Rare
+Paladin,Holy,19885,Neck,Jin'do's Evil Eye,Jin'do the Hexxer,Zul'Gurub,Epic
+Paladin,Holy,18523,Off-Hand,Brightly Glowing Stone,King Gordok,Dire Maul: North,Rare
+Paladin,Holy,19312,Off-Hand,Lei of the Lifegiver,Exalted Reputation with Stormpike Guard,Alterac Valley,Epic
+Paladin,Holy,19348,Off-Hand,Red Dragonscale Protector,Vaelastrasz or Nefarian,Blackwing Lair,Epic
+Paladin,Holy,16058,Ring,Fordring's Seal,Quest: In Dreams,Western Plaguelands,Rare
+Paladin,Holy,19140,Ring,Cauterizing Band,Cache of the Firelord,Molten Core,Epic
+Paladin,Holy,19140,Ring,Cauterizing Band,Cache of the Firelord,Molten Core,Epic
+Paladin,Holy,19382,Ring,Pure Elementium Band,Nefarian,Blackwing Lair,Epic
+Paladin,Holy,18810,Shoulder,Wild Growth Spaulders,Cache of the Firelord,Molten Core,Epic
+Paladin,Holy,12930,Trinket,Briarwood Reed,Jed Runewatcher,Upper Blackrock Spire,Rare
+Paladin,Holy,11819,Trinket,Second Wind,Golem Lord Argelmach,Blackrock Depths,Rare
+Paladin,Holy,19395,Trinket,Rejuvenating Gem,"Firemaw, Ebonroc, Flamegor",Blackwing Lair,Epic
+Paladin,Holy,19343,Trinket,Scrolls of Blinding Light,Firemaw,Blackwing Lair,Epic
+Paladin,Holy,17064,Trinket,Shard of the Scale,Onyxia,Onyxia,Epic
+Paladin,Holy,14553,Waist,Sash of Mercy,World Drop,None,Epic
+Paladin,Holy,18327,Waist,Whipvine Cord,Alzzin the Wildshaper,Dire Maul: East,Rare
+Paladin,Holy,19162,Waist,Corehound Belt,Crafted through Leatherworking,None,Epic
+Paladin,Holy,18459,Wrist,Gallant's Wristguards,Various Bosses,DM:N,Uncommon
+Paladin,Holy,13969,Wrist,Loomguard Armbraces,Kirtonos the Herald,Scholomance,Rare
+Paladin,Retribution,12640,Head,Lionheart Helm,Crafted through Blacksmithing,None,Epic
+Paladin,Retribution,16474,Head,Field Marshal's Lamellar Faceguard,Honor Rank 13,Battleground,Epic
+Paladin,Retribution,16955,Head,Judgement Crown,Onyxia,Onyxia,Epic
+Paladin,Retribution,19372,Head,Helm of Endless Rage,Vaelastrasz,Blackwing Lair,Epic
+Paladin,Retribution,13404,Head,Mask of the Unforgiven,The Unforgiven,Stratholme,Rare
+Paladin,Retribution,18404,Neck,Onyxia Tooth Pendant,Onyxia,Onyxia,Epic
+Paladin,Retribution,19856,Neck,The Eye of Hakkar,Hakkar,Zul'Gurub,Epic
+Paladin,Retribution,15411,Neck,Mark of Fordring,Quest: In Dreams,Western Plaguelands,Rare
+Paladin,Retribution,11933,Neck,Imperial Jewel,Emperor Dagran Thaurissan,Blackrock Depths,Rare
+Paladin,Retribution,19394,Shoulder,Drake Talon Pauldrons,"Firemaw, Ebonroc, Flamegor",Blackwing Lair,Epic
+Paladin,Retribution,16476,Shoulder,Field Marshal's Lamellar Pauldrons,Honor Rank 13,Battleground,Epic
+Paladin,Retribution,12927,Shoulderstrike Shoulders,Pyroguard Emberseer,Upper Blackrock Spire,Rare
+Paladin,Retribution,19436,Back,Cloak of Draconic Might,Trash mobs,Blackwing Lair,Epic
+Paladin,Retribution,18541,Back,Puissant Cape,"Azuregos, World boss",Azshara,Epic
+Paladin,Retribution,20068,Back,Deathguard's Cloak,Exalted Reputation with The League of Arathor,Arathi Basin,Epic
+Paladin,Retribution,13340,Back,Cape of the Black Baron,Baron Rivendare,Stratholme Undead,Rare
+Paladin,Retribution,13397,Back,Stoneskin Gargoyle Cape,Stonespine,Stratholme Undead,Rare
+Paladin,Retribution,11726,Chest,Savage Gladiator Chain,Gorosh the Dervish,Blackrock Depths,Epic
+Paladin,Retribution,16473,Chest,Field Marshal's Lamellar Chestplate,Honor Rank 13,Battleground,Epic
+Paladin,Retribution,14637,Chest,Cadevrous Armor,Various Bosses,Scholomance,Rare
+Paladin,Retribution,11926,Chest,Deathdealer Breastplate,Chest of The Seven,Blackrock Depths,Rare
+Paladin,Retribution,19578,Wrist,Berserker Bracers,Exalted Reputation with Warsong Outriders,Warsong Gulch,Epic
+Paladin,Retribution,19146,Wrist,Wristguards of Stability,Various Bosses,Molten Core,Epic
+Paladin,Retribution,19143,Wrist,Flameguard Gauntlets,Various Bosses,Molten Core,Epic
+Paladin,Retribution,16471,Hands,Marshal's Lamellar Gloves,Honor Rank 13,Battleground,Epic
+Paladin,Retribution,13957,Hands,Gargoyle Slashers,Kirtonos the Herald,Scholomance,Rare
+Paladin,Retribution,15063,Hands,Devilsaur Gauntlets,Crafted through Leatherworking,None,Rare
+Paladin,Retribution,19137,Waist,Onslaugh Girdle,Ragnaros,Molten Core,Epic
+Paladin,Retribution,19380,Waist,Therazane's Link,Nefarian,Blackwing Lair,Epic
+Paladin,Retribution,19402,Legs,Legguards of the Fallen Crusader,Firemaw,Blackwing Lair,Epic
+Paladin,Retribution,16475,Legs,Marshal's Lamellar Legplates,Honor Rank 12,Battleground,Epic
+Paladin,Retribution,14554,Legs,Cloudkeeper Legplates,World Drop,None,Epic
+Paladin,Retribution,15062,Legs,Devilsaur Leggings,Crafted through Leatherworking,None,Rare
+Paladin,Retribution,19387,Feet,Chromatic Boots,Chromaggus,Blackwing Lair,Epic
+Paladin,Retribution,14616,Feet,Bloodmail Boots,Various Bosses,Scholomance,Rare
+Paladin,Retribution,13967,Feet,Windreaver Greaves,Kirtonos the Herald,Scholomance,Rare
+Paladin,Retribution,16472,Feet,Marshal's Lamellar Boots,Honor Rank 12,Battleground,Epic
+Paladin,Retribution,19432,Ring,Cricle of Applied Force,Flamegor,Blackwing Lair,Epic
+Paladin,Retribution,19384,Ring,Master Dragonslayer's Ring,Quest: The Lord of Blackrock,Blackwing Lair,Epic
+Paladin,Retribution,18821,Ring,Quick Strike Ring,Various Bosses,Molten Core,Epic
+Paladin,Retribution,13098,Ring,Painweaver Band,General Drakkisath,Upper Blackrock Spire,Rare
+Paladin,Retribution,17063,Ring,Band of Accuria,Ragnaros,Molten Core,Epic
+Paladin,Retribution,11815,Trinket,Hand of Justice,General Angerforge,Blackrock Depths,Rare
+Paladin,Retribution,19406,Trinket,Drake Fang Talisman,Ebonroc,Blackwing Lair,Epic
+Paladin,Retribution,13965,Trinket,Blackhand's Breadth,Reward from Gen. Drakkisath's Demise,Upper Blackrock Spire,Rare
+Paladin,Retribution,17182,Weapon,"Sulfuras, Hand of Ragnaros",Created through Chain quest,None,Legendary
+Paladin,Retribution,19364,Weapon,Ashkandi Greatsword of the Brotherhood,Nefarian,Blackwing Lair,Epic
+Paladin,Retribution,18876,Weapon,Grand Marshal's Claymore,Honor Rank 14,Battleground,Epic
+Paladin,Retribution,19334,Weapon,The Untamed Blade,Razorgore the Untamed,Blackwing Lair,Epic
+Paladin,Retribution,19854,Weapon,Zin'rokh Destroyer of Worlds,Hakkar,Zul'Gurub,Epic

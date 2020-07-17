@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bis_item.css') }}">
+</head>
+<h1> Materials needed for <span style="color:red">{{ amount }}</span> {{ name }}</h1>
+<table border= 1>
+    <tr>
+        <th colspan="2"><a href="http://classic.wowhead.com/item={{ item_id }}/">{{ name }}</a></th>
+        {% for k in materials %}
+        <tr>           
+            <td style="padding-left: 3em;"><a href="http://classic.wowhead.com/item={{ k }}/">{{ k }}</a></td>
+            <td class="Common">Amount: {{ materials[k] }}</td>
+        </tr>
+        {% endfor %}
+    </tr>
+</table> 
+{% endblock %}

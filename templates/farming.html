@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Farming Tracker</h1>
+<p>Enter data in the sheet below to keep track of item you are farming.</p>
+<br />
+<h2>Search Item to farm</h2>
+<form action="/farming-result" method="POST">
+    <p>Item: <input type="text" name="Name" /></p>
+    <p>Amount: <input type="number" name="Amount" /></p>
+    <p><input type="submit" value="submit" /></p>
+</form>
+<h2>Update Item count</h2>
+    
+<h2>Find item</h2>
+{% endblock %}

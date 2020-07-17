@@ -1,0 +1,35 @@
+{
+    "items": {
+        "13458": {
+            "name": "Greater Nature Protection Potion",
+            "mats": {
+                "7067":1,
+                "13463":1,
+                "8925":1
+            }
+        },
+        "10646": {
+            "name": "Goblin Sapper Charge",
+            "mats": {
+                "4338":1,
+                "10505":3,
+                "10560":1
+            }
+        },
+        "13444": {
+            "name": "Major Mana Potion",
+            "mats": {
+                "13463":3, 
+                "13467":2, 
+                "8925":1
+            }
+        },
+        "13931": {
+            "name": "Nightfin Soup",
+            "mats": {
+                "13759":1,
+                "159":1
+            }
+        }
+    }   
+}

@@ -1,62 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            table {
-                font-family: Arial, Helvetica, sans-serif;
-                /* border-collapse: collapse; */
-                width: 100%;
-            }
-
-            td, th {
-                border: 1px solid #444444;
-                text-align: left;
-                padding: 8px;
-            }
-            .tr-obtained {
-                background-color: greenyellow;
-            }
-            .tr-head {
-                background-color: black;
-                color: white;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Holy Paladin Best-in-Slot</h1>
-        <p>there is {{ items|count }} items.</p>
-        <table border= 1>
-            {% for item in items %}
-                {% if item[0] == 'Image' %}
-                <tr class='tr-head'>
-                    <th>{{ item[0] }}</th>
-                    <th>{{ item[1] }}</th>
-                    <th>{{ item[2] }}</th>
-                    <th>{{ item[3] }}</th>
-                    <th>{{ item[4] }}</th>
-                    <th>{{ item[5] }}</th>
-                </tr>
-                {% elif item[5] == 'True' %}
-                <tr class="tr-obtained">
-                    <td> {{ item[0] }} </td>
-                    <td> {{ item[1] }}</td>
-                    <td> {{ item[2] }}</td>
-                    <td> {{ item[3] }}</td>
-                    <td> {{ item[4] }}</td>
-                    <td> {{ item[5] }}</td>
-                </tr>
-                {% else %}
-                <tr>
-                    <td> {{ item[0] }} </td>
-                    <td> {{ item[1] }}</td>
-                    <td> {{ item[2] }}</td>
-                    <td> {{ item[3] }}</td>
-                    <td> {{ item[4] }}</td>
-                    <td> {{ item[5] }}</td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bis_button.css') }}">
+</head>
+<h1>Best In Slot Home</h1>
+<p>Choose the Class and Specialization to return a list of Best in Slot associated to it.</p>
+<h3>Paladin</h3>
+<form action="/bis-result" method="POST">
+    <input type="submit" class="btn-paladin" name="holy_paladin" value="Holy" />
+    <input type="submit" class="btn-paladin" name="ret_paladin" value="Retribution" />
+    <input type="submit" class="btn-paladin" name="prot_paladin" value="Protection" />
+</form>
+<h3>Hunter</h3>
+<form action="/bis-result" method="POST">
+    <input type="submit" class="btn-hunter" name="hunter_dps" value="DPS" />
+</form>
+{% endblock %}
