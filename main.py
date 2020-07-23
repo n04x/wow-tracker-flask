@@ -1,13 +1,17 @@
-from flask import Flask, redirect, url_for, render_template, request, make_response
+from flask import Flask, redirect, url_for, render_template, request, session
 
 from item import bisItemsExtract
 from mats import matList
 app = Flask(__name__)
+app.secret_key = 'any random string'
 # ========================================================
 # HOME PAGE
 # ========================================================
 @app.route('/')
 def index():
+    if 'username' in session:
+        username = session['username']
+        return render_template('bis.html')
     return render_template('index.html')
 
 # ========================================================
@@ -57,5 +61,13 @@ def farmResult():
         #         materials[m] = int(request.form.get('Amount')) * int(result[0].mats[m])
         return render_template('farming-result.html', item_id = item_id, materials = materials, name = request.form.get("Name"), amount = request.form.get("Amount"))
 
+# ========================================================
+# LOGIN ROUTES
+# ========================================================
+
+
+# ========================================================
+# ALWAYS ADD ROUTE BEFORE THE IF-STATEMENT BELOW
+# ========================================================
 if __name__ == "__main__":
     app.run(debug=True)

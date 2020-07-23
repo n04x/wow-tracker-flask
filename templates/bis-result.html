@@ -10,15 +10,15 @@
 
         <table border= 1 id="myTable">
             <tr class='tr-head'>
-                <td>Item</td>
-                <th>Slot</th>
+                <td>Slot</td>
+                <th>Item</th>
                 <th>Source</th>
                 <th>Location</th>
             </tr>
             {% for item in items %}
                 <tr class="{{ item[7] }}">
-                    <th><a href="http://classic.wowhead.com/item={{ item[2] }}/">Link</a></th>
-                    <td> {{ item[3] }}</td>
+                    <th>{{ item[3] }}</th>
+                    <td><a href="http://classic.wowhead.com/item={{ item[2] }}/">Link</a></td>
                     <td> {{ item[5] }}</td>
                     <td> {{ item[6] }}</td>
                 </tr>

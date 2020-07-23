@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
+{% block title %}Best In Slot Home{% endblock %}
 {% block content %}
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='bis_button.css') }}">
 </head>
-<h1>Best In Slot Home</h1>
 <p>Choose the Class and Specialization to return a list of Best in Slot associated to it.</p>
 <h3>Paladin</h3>
 <form action="/bis-result" method="POST">
