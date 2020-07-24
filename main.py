@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request, session
+import sqlite3
 
 from item import bisItemsExtract
 from mats import matList
@@ -23,19 +24,40 @@ def bis():
 
 
 
-@app.route('/bis-result', methods = ['POST', 'GET'])
-def bisCSV():
-    if 'holy_paladin' in request.form:
-        bis_class = 'Paladin'
-        bis_specialization = 'Holy'
-        bis_items = bisItemsExtract(bis_class, bis_specialization)
-    elif 'ret_paladin' in request.form:
-        bis_class = 'Paladin'
-        bis_specialization = 'Retribution'
-        bis_items = bisItemsExtract(bis_class, bis_specialization)
+# @app.route('/bis-result', methods = ['POST', 'GET'])
+# def bisCSV():
+#     if 'holy_paladin' in request.form:
+#         bis_class = 'Paladin'
+#         bis_specialization = 'Holy'
+#         bis_items = bisItemsExtract(bis_class, bis_specialization)
+#     elif 'ret_paladin' in request.form:
+#         bis_class = 'Paladin'
+#         bis_specialization = 'Retribution'
+#         bis_items = bisItemsExtract(bis_class, bis_specialization)
     
-    return render_template('bis-result.html', items = bis_items, bis_specialization=bis_specialization, bis_class=bis_class)
+#     return render_template('bis-result.html', items = bis_items, bis_specialization=bis_specialization, bis_class=bis_class)
 
+@app.route('/bis-result', methods = ['POST', 'GET'])
+def bisDB():
+    if request.method == 'POST':
+        if 'holy_paladin' in request.form:
+            bis_class = 'Paladin'
+            bis_specialization = 'Holy'
+        elif 'ret_paladin' in request.form:
+            bis_class = 'Paladin'
+            bis_specialization = 'Retribution'
+
+
+        db_con = sqlite3.connect('bis.db')
+        db_con.row_factory = sqlite3.Row
+
+        db_cur = db_con.cursor()
+        db_cur.execute("SELECT * FROM BIS WHERE Class = ? AND Specialization = ?", (bis_class, bis_specialization))
+        rows = db_cur.fetchall()
+    
+    return render_template('bis-result.html', rows=rows)
+
+    
 # ========================================================
 # FARMING ROUTES
 # ========================================================

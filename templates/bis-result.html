@@ -8,20 +8,31 @@
         <h1>{{ bis_specialization }} {{ bis_class }} Best-in-Slot</h1>
         <input type="text" id="searchInput" onkeyup="searchLocation()" placeholder="Search for locations..." title="Type in a location">
 
-        <table border= 1 id="myTable">
+        <table border=1 id="myTable">
             <tr class='tr-head'>
                 <td>Slot</td>
-                <th>Item</th>
-                <th>Source</th>
-                <th>Location</th>
+                <td>Item</td>
+                <td>Source</td>
+                <td>Location</td>
             </tr>
-            {% for item in items %}
-                <tr class="{{ item[7] }}">
-                    <th>{{ item[3] }}</th>
-                    <td><a href="http://classic.wowhead.com/item={{ item[2] }}/">Link</a></td>
-                    <td> {{ item[5] }}</td>
-                    <td> {{ item[6] }}</td>
-                </tr>
+            {% for row in rows %}
+            {% if row['Obtained'] == 1 %}
+            <tr class="{{ row['Quality'] }}" style="background-color: green;">
+                <td>{{ row['Slot'] }}</td>
+                <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
+                <td>{{ row['Source'] }}</td>
+                <td>{{ row['Location'] }}</td>
+                <td>{{ row['Obtained'] }}</td>
+            </tr>
+            {% else %}
+            <tr class="{{ row['Quality'] }}">
+                <td>{{ row['Slot'] }}</td>
+                <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
+                <td>{{ row['Source'] }}</td>
+                <td>{{ row['Location'] }}</td>
+                <td>{{ row['Obtained'] }}</td>
+            </tr>
+            {% endif %}
             {% endfor %}
         </table>
     </div>
