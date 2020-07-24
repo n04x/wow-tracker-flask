@@ -22,21 +22,6 @@ def index():
 def bis():
     return render_template('bis.html')
 
-
-
-# @app.route('/bis-result', methods = ['POST', 'GET'])
-# def bisCSV():
-#     if 'holy_paladin' in request.form:
-#         bis_class = 'Paladin'
-#         bis_specialization = 'Holy'
-#         bis_items = bisItemsExtract(bis_class, bis_specialization)
-#     elif 'ret_paladin' in request.form:
-#         bis_class = 'Paladin'
-#         bis_specialization = 'Retribution'
-#         bis_items = bisItemsExtract(bis_class, bis_specialization)
-    
-#     return render_template('bis-result.html', items = bis_items, bis_specialization=bis_specialization, bis_class=bis_class)
-
 @app.route('/bis-result', methods = ['POST', 'GET'])
 def bisDB():
     if request.method == 'POST':

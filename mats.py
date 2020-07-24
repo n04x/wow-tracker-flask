@@ -10,9 +10,6 @@ class Materials:
         self.mats = mats
 
 def matList():
-    # with open('mats.csv') as f:
-    #     for row in csv.reader(f):
-    #         data.append(row)
     mats = []
     with open('mats.json') as f:
         data = json.load(f)

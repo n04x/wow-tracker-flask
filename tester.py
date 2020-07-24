@@ -24,6 +24,12 @@ users = {
         "bio": "Bob Cashflow, I am rich"
     }
 }
+@app.route('/')
+def index():
+    if 'username' in session:
+        username = session['username']
+        return 'Logged in as ' + username + '<br>' + "<b><a href= '/sign-out'>Click here to logout</a></b>"
+    return "You are not logged in <br><a href='/sign-in'>"+ "Click here to login</a>"
 
 @app.route('/sign-in', methods=['GET', 'POST'])
 def sign_in():
