@@ -1,0 +1,18 @@
+db_con = sqlite3.connect('bis.db')
+db_con.row_factory = sqlite3.Row
+db_cur = db_con.cursor()
+db_cur.execute("SELECT * FROM BIS WHERE Class = ? AND Specialization = ?", ('Paladin', 'Holy'))
+items_list = db_cur.fetchall()
+db_cur.execute("SELECT * FROM USER WHERE User_ID = ?", (session_id))
+user_items = db_cur.fetchall()
+
+foreach item user_items:
+    find a match in items_list:
+        if true:
+            items_list['Obtained'] = 1
+
+
+
+item_list=db_cur.execute("SELECT ITEM")
+
+

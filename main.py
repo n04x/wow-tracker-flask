@@ -3,8 +3,12 @@ import sqlite3
 
 from item import bisItemsExtract
 from mats import matList
+from user import *
+from database import defaultBISDisplay, userBISDisplay
+
 app = Flask(__name__)
-app.secret_key = 'any random string'
+app.secret_key = 'n04xMadeThisToScatterThroughTheWind'
+
 # ========================================================
 # HOME PAGE
 # ========================================================
@@ -32,13 +36,11 @@ def bisDB():
             bis_class = 'Paladin'
             bis_specialization = 'Retribution'
 
-
-        db_con = sqlite3.connect('bis.db')
-        db_con.row_factory = sqlite3.Row
-
-        db_cur = db_con.cursor()
-        db_cur.execute("SELECT * FROM BIS WHERE Class = ? AND Specialization = ?", (bis_class, bis_specialization))
-        rows = db_cur.fetchall()
+        if 'username' in session:
+            print('logged in')
+            rows = userBISDisplay(bis_class, bis_specialization)
+        else:
+            rows = defaultBISDisplay(bis_class, bis_specialization)
     
     return render_template('bis-result.html', rows=rows)
 
@@ -63,14 +65,29 @@ def farmResult():
                     print(m)
                     print(mat_lists[i].mats)
                     materials[m] = int(request.form.get('Amount')) * mat_lists[i].mats[m]
-        # if request.form.get('Name') == result[0].name:
-        #     for m in result[0].mats:
-        #         materials[m] = int(request.form.get('Amount')) * int(result[0].mats[m])
         return render_template('farming-result.html', item_id = item_id, materials = materials, name = request.form.get("Name"), amount = request.form.get("Amount"))
 
 # ========================================================
 # LOGIN ROUTES
 # ========================================================
+@app.route('/login', methods = ['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        session.pop('user_id', None)
+
+        username = request.form['username']
+        password = request.form['password']
+        session['username'] = request.form['username']
+
+        user = [x for x in users if x.username == username][0]
+        if user and user.password == password:
+            session['username'] = username
+            # session['user_id'] = user.id
+            return redirect(url_for('bis'))
+
+        return redirect(url_for('login'))
+    
+    return render_template('login.html')
 
 
 # ========================================================
