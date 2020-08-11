@@ -8,7 +8,5 @@ class User:
         return f'<User:{self.username}>'
 
 users = []
-users.append(User(id=1, username='Anthony', password='password'))
-users.append(User(id=2, username='Becca', password='secret'))
-users.append(User(id=3, username='Carlos', password='something'))
+users.append(User(id=1, username="Nohax", password='paladin'))
 users.append(User(id=4, username='Bob', password='123456'))

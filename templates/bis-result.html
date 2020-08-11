@@ -23,7 +23,6 @@
                 <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
                 <td>{{ row['Source'] }}</td>
                 <td>{{ row['Location'] }}</td>
-                <td>{{ row['Obtained'] }}</td>
             </tr>
             {% else %}
             <tr class="{{ row['Quality'] }}">
@@ -31,7 +30,6 @@
                 <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
                 <td>{{ row['Source'] }}</td>
                 <td>{{ row['Location'] }}</td>
-                <td>{{ row['Obtained'] }}</td>
             </tr>
             {% endif %}
             {% endfor %}

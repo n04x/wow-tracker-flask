@@ -4,7 +4,7 @@ import sqlite3
 from item import bisItemsExtract
 from mats import matList
 from user import *
-from database import defaultBISDisplay, userBISDisplay
+from database import defaultBISDisplay, userBISDisplay, userBISProfileDisplay
 
 app = Flask(__name__)
 app.secret_key = 'n04xMadeThisToScatterThroughTheWind'
@@ -89,7 +89,16 @@ def login():
     
     return render_template('login.html')
 
-
+# ========================================================
+# PROFILE ROUTE
+# ========================================================
+@app.route('/profile', methods = ['POST', 'GET'])
+def profile():
+    if not session.get('username') is None:
+        username = session.get('username')
+        rows = userBISProfileDisplay()
+        return render_template('profile.html', result=rows)
+    return "You are not logged in <br><a href='/login'>"+ "Click here to login</a>"
 # ========================================================
 # ALWAYS ADD ROUTE BEFORE THE IF-STATEMENT BELOW
 # ========================================================

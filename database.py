@@ -56,3 +56,34 @@ def userBISDisplay(bis_class, bis_specialization):
 
     return bis_obtained          
     
+# ========================================================
+# Function to display the obtained BIS for user profile 
+# ========================================================
+def userBISProfileDisplay():
+    query = "SELECT * FROM USER_BIS WHERE Name = ?", ("Bob", )
+
+    db_con = sqlite3.connect('bis.db')
+    db_con.row_factory = sqlite3.Row
+    db_cur = db_con.cursor()
+
+    db_cur.execute(query[0],query[1])
+    obtained_item = db_cur.fetchall()
+    return obtained_item
+
+# ========================================================
+# Function to edit the database
+# ========================================================
+def updateObtainedItem(item_name, user_name):
+
+    db_con = sqlite3.connect('bis.db')
+    db_con.row_factory = sqlite3.Row
+    db_cur = db_con.cursor()
+
+    id_query = "SELECT ID FROM BIS WHERE Name = ?",(item_name, )
+    db_cur.execute(id_query[0],id_query[1])
+    id_item = db_cur.fetchall()
+
+    add_query = "INSERT INTO USER_BIS (Name, ID) VALUES (?, ?)",(user_name, id_item)
+    db_cur.execute(add_query[0],add_query[1])
+    
+
