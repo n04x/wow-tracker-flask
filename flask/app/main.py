@@ -77,6 +77,9 @@ def bisDB():
         else:
             # rows = defaultBISDisplay(bis_class, bis_specialization)
             rows = queryItemsBySpecialization(bis_items, bis_class, bis_specialization)
+            obtained = []
+            for i in range(len(rows)):
+                obtained.append(0)
 
     return render_template('bis-result.html', results=zip(rows, obtained))
 
@@ -135,9 +138,9 @@ def profile():
         rows = queryObtainedItems(USER_BIS)
         return render_template('profile.html', result=rows)
     return "You are not logged in <br><a href='/login'>"+ "Click here to login</a>"
+
 # ========================================================
 # ALWAYS ADD ROUTE BEFORE THE IF-STATEMENT BELOW
 # ========================================================
 if __name__ == "__main__":
-    app.run(debug=True)
-
+    app.run(host='0.0.0.0', port=(5000))
