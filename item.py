@@ -1,4 +1,5 @@
 import csv
+from flask_sqlalchemy import SQLAlchemy
 
 data =[]
 
@@ -10,4 +11,6 @@ def bisItemsExtract(bis_class, bis_specialization):
                 data.append(row)
 
     return data
-    
+
+
+

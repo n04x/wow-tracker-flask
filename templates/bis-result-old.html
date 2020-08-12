@@ -16,22 +16,22 @@
                 <td>Source</td>
                 <td>Location</td>
             </tr>
-            {% for (row, obtain) in results %}
-                {% if obtain == 1 %}
-                <tr class="{{ row.Quality }}" style="background-color: green;">
-                    <td>{{ row.Slot }}</td>
-                    <td><a href="http://classic.wowhead.com/item={{ row.ID }}/">Link</a></td>
-                    <td>{{ row.Source }}</td>
-                    <td>{{ row.Location }}</td>
-                </tr>
-                {% else %}
-                <tr class="{{ row.Quality }}">
-                    <td>{{ row.Slot }}</td>
-                    <td><a href="http://classic.wowhead.com/item={{ row.ID }}/">Link</a></td>
-                    <td>{{ row.Source }}</td>
-                    <td>{{ row.Location }}</td>
-                </tr>
-                {% endif %}
+            {% for row in rows %}
+            {% if row['Obtained'] == 1 %}
+            <tr class="{{ row['Quality'] }}" style="background-color: green;">
+                <td>{{ row['Slot'] }}</td>
+                <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
+                <td>{{ row['Source'] }}</td>
+                <td>{{ row['Location'] }}</td>
+            </tr>
+            {% else %}
+            <tr class="{{ row['Quality'] }}">
+                <td>{{ row['Slot'] }}</td>
+                <td><a href="http://classic.wowhead.com/item={{ row['ID'] }}/">Link</a></td>
+                <td>{{ row['Source'] }}</td>
+                <td>{{ row['Location'] }}</td>
+            </tr>
+            {% endif %}
             {% endfor %}
         </table>
     </div>

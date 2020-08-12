@@ -14,8 +14,11 @@ def runDatabase(query, edit_db):
         return None
         db_cur.execute(query[0])
 
+def queryItemsAll(bis_items):
+    return bis_items.query.all()
+
 # ========================================================
-# Function to display the default BIS for each class 
+# Function to display the default BIS for each specialization. 
 # ========================================================    
 def defaultBISDisplay(bis_class, bis_specialization):
     query = "SELECT * FROM BIS WHERE Class = ? AND Specialization = ?", (bis_class, bis_specialization)
@@ -23,6 +26,9 @@ def defaultBISDisplay(bis_class, bis_specialization):
     default_bis_list = runDatabase(query, False)
 
     return default_bis_list
+
+def queryItemsBySpecialization(bis_items, bis_class, bis_specialization):
+    return bis_items.query.filter_by(Class=bis_class, Specialization=bis_specialization).all()
 
 # ========================================================
 # Function to display the user BIS for each class
@@ -55,7 +61,21 @@ def userBISDisplay(bis_class, bis_specialization):
     bis_obtained = db_cur.fetchall()
 
     return bis_obtained          
+
+def ObtainedBISList(bis_items, USER_BIS, bis_class, bis_specialization):
+    bis_list = bis_items.query.filter_by(Class=bis_class, Specialization=bis_specialization).all()
+    user_bis_list = USER_BIS.query.all()
+    result = []
     
+    for bis in bis_list:
+        found = 0
+        for user_bis in user_bis_list:
+            if bis.ID == user_bis.ID:
+                found = 1
+                break
+        result.append(found)
+    return result
+
 # ========================================================
 # Function to display the obtained BIS for user profile 
 # ========================================================
@@ -70,6 +90,8 @@ def userBISProfileDisplay():
     obtained_item = db_cur.fetchall()
     return obtained_item
 
+def queryObtainedItems(USER_BIS):
+    return USER_BIS.query.all()
 # ========================================================
 # Function to edit the database
 # ========================================================
